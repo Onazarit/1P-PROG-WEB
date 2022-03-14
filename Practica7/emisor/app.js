@@ -1,5 +1,8 @@
 // var Emitter = require('./emitter');
-var Emitter = require('events');
+var Emitter = require('events'); 
+// ^ El codigo se ejecuta de igual manera que con el emitter creado por nostoros
+// Aunque este muestre mas cosas y algunos nombres esten declarados diferentes,
+// Las funciones que agregamos siguen funcionando de igual manera
 
 var emtr = new Emitter();
 
