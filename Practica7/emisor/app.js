@@ -1,4 +1,9 @@
 // var Emitter = require('./emitter');
+var config = require('./config')
+// ^ Al usar config podemos usar los valores definidos en este para
+// referenciar a los valores previos que usabamos para guardar,
+// Por eso al llamarlos se ejecutan correctamente
+
 var Emitter = require('events'); 
 // ^ El codigo se ejecuta de igual manera que con el emitter creado por nostoros
 // Aunque este muestre mas cosas y algunos nombres esten declarados diferentes,
@@ -6,20 +11,20 @@ var Emitter = require('events');
 
 var emtr = new Emitter();
 
-emtr.on('greet', () => {
+emtr.on(config.events.GREET, () => {
     console.log('Somewhere, someone said hello');
 });
 
-emtr.on('greet', () => {
+emtr.on(config.events.GREET, () => {
     console.log('A greeting occurred!');
 });
 
 // console.log('Hello!');
-// emtr.emit('greet');
+emtr.emit('greet');
 // Como los 2 logs estan asignados a greet, al usar el emit se muestram
 // los logs en orden, sin antes primero mostrar el log anterior del emit
 
-emtr.on('jump', () => {
+emtr.on(config.events.JUMP, () => {
     console.log('Someone jumped!');
 });
 
