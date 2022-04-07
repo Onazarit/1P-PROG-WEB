@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <link href="assets/style.css" type="text/css" rel="stylesheet" />
+    </head>
+    <body>
+        <ul>
+            <% if (number % 2 == 0) { %>
+                <h1>Par</h1>
+                    <% for(let i=1; i<= number*2; i++) { %>
+                        <li><%= i %></li>
+                    <% } %>
+            <% } %>
+
+            <% if (number % 2 != 0) { %>
+                <h1>Impar</h1>
+                    <% for(let i=1; i<= number; i++) { %>
+                        <li><%= i %></li>
+                    <% } %>
+            <% } %>
+        </ul>
+    </body>
+</html>

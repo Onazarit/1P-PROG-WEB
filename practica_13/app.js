@@ -18,4 +18,8 @@ app.get('/person/:id', function (req, res) { // Tercera ruta, recibe un parametr
     res.render('person', { ID: req.params.id});
 });
 
+app.get('/numbers/:id', function (req, res) { // Cuarta Ruta, PRACTICA_13
+    res.render('numbers', { number: req.params.id});
+});
+
 app.listen(port); // Levantar el server y ponerlo a la escucha
