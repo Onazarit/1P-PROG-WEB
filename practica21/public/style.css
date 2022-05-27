@@ -1,0 +1,15 @@
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+table {
+    width: 30%;
+    border-collapse: separate;    
+  }
+tr:nth-child(odd)		{ background-color:#fff; }
+tr:nth-child(even)		{ background-color:#eee; }
+
+th, td {
+    padding: 10px;
+    text-align: left;
+  }
