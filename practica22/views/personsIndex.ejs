@@ -22,6 +22,8 @@
                     <td> <%= element.nombre %></th>
                     <td> <%= element.edad %></th>
                     <td> <%= element.tipoSangre %></th>
+                    <td><a href="<%= `deletePerson/${element._id}` %>">Delete</a></td>
+                    <td><a href="<%= `findById/${element._id}` %>">Update</a></td>
                 </tr>
             <% }); %>
         </table>
